@@ -37,3 +37,7 @@ The purpose of this project is to explore how local LLMs can be used to build a 
 - Website/news monitoring
 - Personalized daily briefings
 - Improved UI/UX and assistant memory
+
+## Note
+
+This project is under active development and is intended as a learning and portfolio project in GenAI, local LLMs, and full-stack AI assistant development.

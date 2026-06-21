@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import requests
 import subprocess
+import os
 from bs4 import BeautifulSoup
 import feedparser
 from datetime import datetime
@@ -20,7 +21,9 @@ app.add_middleware(
 OLLAMA_URL = "http://127.0.0.1:11434/api/chat"
 MODEL = "qwen2.5:3b"
 
-IMESSAGE_TARGET = "+10000000000"
+# Configure your iMessage recipient via the IMESSAGE_TARGET env var
+# e.g. export IMESSAGE_TARGET="+10000000000"
+IMESSAGE_TARGET = os.environ.get("IMESSAGE_TARGET", "+10000000000")
 
 NEWS_SOURCES = [
     # Albania
